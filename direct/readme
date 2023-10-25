@@ -1,0 +1,25 @@
+gomobile init
+go get golang.org/x/mobile/cmd/gobind
+gomobile bind -target android
+
+gomobile version unknown: cannot test gomobile binary: exit status 1, no required module provides package golang.org/x/mobile/cmd/gomobile; to add it:
+	go get golang.org/x/mobile/cmd/gomobile
+
+
+kmihara ~/Documents/test/simple $ gomobile bind -target ios
+gomobile: -target="ios" requires Xcode
+
+xcode-select --switch path/to/Xcode.app
+
+
+gomobile qiita
+https://qiita.com/kabochapo/items/b37c03ea9d30572fbd59#%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%82%92%E4%BD%BF%E3%81%86
+
+add aar, jar to android studio
+https://zenn.dev/apple_nktn/articles/d6f7e0cac8d413
+
+
+Null extracted folder for artifact: ResolvedArtifact(componentIdentifier=sample.aar, variant=local file, variantName=null, artifactFile=/Users/kmihara/Documents/test/simple/sample.aar, isTestFixturesArtifact=false, extractedFolder=null, publishedLintJar=null, dependencyType=ANDROID, isWrappedModule=false, buildMapping={__current_build__=/Users/kmihara/AndroidStudioProjects/AndroidWithGo})
+
+then only need aar needed.
+no need jar file, so remove it
